@@ -20,13 +20,42 @@ namespace FizzBuzz
                         continue;
 
                     string[] fbList = input.Split(' ');
-                    Console.WriteLine(fbList[2]);
-                   
+                    //Console.WriteLine(fbList[2]);
+
+                    int X = int.Parse(fbList[0]);
+                    int Y = int.Parse(fbList[1]);
+                    int N = int.Parse(fbList[2]);
+
+                    // Console.WriteLine(X);
+
+                    for (int i = 1; i <= N; i++)
+                    {
+                        bool FizzIt = i % X == 0;
+                        bool BuzzIt = i % Y == 0;
+                        //bool FizzBuzzIt = (FizzIt) && (BuzzIt);
+
+                        var fizzBuzzOut = new StringBuilder();
+
+                        if (FizzIt)
+                        {
+                            fizzBuzzOut.Append("F");
+                        }
+                        else if (BuzzIt)
+                        {
+                            fizzBuzzOut.Append("B");
+                        }
+                        else if (!FizzIt && !BuzzIt)
+                        {
+                            fizzBuzzOut.Append(i.ToString());
+                        }
+
+                        Console.WriteLine(fizzBuzzOut);
+                    }
                 }
 
-
+            
             Console.ReadKey();
-
+            #region alternative file read code solution
 
             // Works too keeping incase proves to be useful
             //IEnumerable<string> input = File.ReadLines(@"C:\Users\princ\Documents\Notes\CodeEval_fizzBuzz.txt");
@@ -42,12 +71,12 @@ namespace FizzBuzz
             //    Console.WriteLine(fbInstructionLine);
             //}
             //Console.ReadKey();
-
+            #endregion 
         }
 
-        public string FizzBuzzIt()
-        {
-
-        }
+        //public string FizzBuzzIt()
+        //{
+            
+        //}
     }
 }
