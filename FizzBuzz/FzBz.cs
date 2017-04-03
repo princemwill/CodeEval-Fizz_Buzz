@@ -32,11 +32,15 @@ namespace FizzBuzz
                     {
                         bool FizzIt = i % X == 0;
                         bool BuzzIt = i % Y == 0;
-                        //bool FizzBuzzIt = (FizzIt) && (BuzzIt);
+                        bool FizzBuzzIt = FizzIt && BuzzIt;
 
                         var fizzBuzzOut = new StringBuilder();
 
-                        if (FizzIt)
+                        if (FizzBuzzIt)
+                        {
+                            fizzBuzzOut.Append("FB");
+                        }
+                        else if (FizzIt)
                         {
                             fizzBuzzOut.Append("F");
                         }
