@@ -57,30 +57,8 @@ namespace FizzBuzz
                     }
                 }
 
-            
+
             Console.ReadKey();
-            #region alternative file read code solution
-
-            // Works too keeping incase proves to be useful
-            //IEnumerable<string> input = File.ReadLines(@"C:\Users\princ\Documents\Notes\CodeEval_fizzBuzz.txt");
-
-
-            //foreach (var fbInstructionLine in input)
-            //{
-
-            //    string[] fbList = fbInstructionLine.Split(' ');           
-            //    Console.WriteLine(fbList[2]);
-
-            //      This portionn gives the same output as Conosle.WriteLine(input); does in above method
-            //    Console.WriteLine(fbInstructionLine);
-            //}
-            //Console.ReadKey();
-            #endregion 
         }
-
-        //public string FizzBuzzIt()
-        //{
-            
-        //}
     }
 }
