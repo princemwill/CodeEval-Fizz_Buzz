@@ -19,12 +19,12 @@ namespace FizzBuzz
                     if (null == input)
                         continue;
 
-                    string[] fbList = input.Split(' ');
+                    string[] fbArguments = input.Split(' ');
                     //Console.WriteLine(fbList[2]);
 
-                    int X = int.Parse(fbList[0]);
-                    int Y = int.Parse(fbList[1]);
-                    int N = int.Parse(fbList[2]);
+                    int X = int.Parse(fbArguments[0]);
+                    int Y = int.Parse(fbArguments[1]);
+                    int N = int.Parse(fbArguments[2]);
 
                     // Console.WriteLine(X);
 
