@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace FizzBuzz
 {
     class FzBz
-    {        
+    {
         static void Main(string[] args)
         {
-            using (StreamReader reader = File.OpenText(@"C: \Users\princ\Documents\Notes\CodeEval_fizzBuzz2.txt"))
+            using (StreamReader reader = File.OpenText(args[0]))
                 while (!reader.EndOfStream)
                 {
                     string input = reader.ReadLine();
@@ -34,19 +34,19 @@ namespace FizzBuzz
 
                         if (FizzBuzzIt)
                         {
-                            fizzBuzzOut.Append("FB");
+                            fizzBuzzOut.Append("FB ");
                         }
                         else if (FizzIt)
                         {
-                            fizzBuzzOut.Append("F");
+                            fizzBuzzOut.Append("F ");
                         }
                         else if (BuzzIt)
                         {
-                            fizzBuzzOut.Append("B");
+                            fizzBuzzOut.Append("B ");
                         }
                         else if (!FizzIt && !BuzzIt)
                         {
-                            fizzBuzzOut.Append(i.ToString());
+                            fizzBuzzOut.Append(i.ToString() + " ");
                         }
 
                     }
